@@ -1,5 +1,5 @@
 # hackathon_bsa
-# 📊 Modélisation Automatique de Séries Temporelles
+# 📊 TempApp : Modélisation Automatique de Séries Temporelles
 
 Bienvenue sur le dépôt officiel de notre projet développé dans le cadre du Hackathon !  
 Notre application facilite la **modélisation automatique de séries temporelles** via une interface intuitive et rapide. 🌟
