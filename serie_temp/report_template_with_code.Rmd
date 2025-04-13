@@ -1,0 +1,86 @@
+
+---
+title: "`r params$title`"
+author: "`r params$author`"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    number_sections: true
+    theme: flatly
+  pdf_document: default
+  word_document: default
+params:
+  title: "Rapport sur les séries temporelles"
+  author: "Nom de l'utilisateur"
+  model_summary: NA
+  plot_serie: NA
+  plot_acf: NA
+  plot_pacf: NA
+  stationarity_results: NA
+  forecast_plot: NA
+  forecast_table: NA
+  residual_tests: NA
+---
+
+# Introduction
+
+Ce rapport présente les résultats de la modélisation des séries temporelles selon les paramètres définis dans l'application Shiny.
+
+# Résumé du modèle estimé
+
+```{r model-summary, echo=FALSE}
+cat(params$model_summary)
+```
+
+# Série temporelle
+
+```{r plot-serie, echo=FALSE, fig.height=5, fig.width=8}
+print(params$plot_serie)
+```
+
+# Analyse des autocorrelations
+
+## ACF
+
+```{r plot-acf, echo=FALSE, fig.height=4, fig.width=7}
+print(params$plot_acf)
+```
+
+## PACF
+
+```{r plot-pacf, echo=FALSE, fig.height=4, fig.width=7}
+print(params$plot_pacf)
+```
+
+# Tests de stationnarité
+
+```{r stationarity-tests, echo=FALSE}
+cat(params$stationarity_results)
+```
+
+# Prévisions
+
+## Graphique des prévisions
+
+```{r plot-forecast, echo=FALSE, fig.height=5, fig.width=8}
+print(params$forecast_plot)
+```
+
+## Tableau des prévisions
+
+```{r forecast-table, echo=FALSE}
+knitr::kable(params$forecast_table, caption = "Prévisions détaillées")
+```
+
+# Tests de significativité sur les résidus
+
+```{r residual-tests, echo=FALSE}
+cat(params$residual_tests)
+```
+
+# Conclusion
+
+Ce rapport vous offre une vue d'ensemble des analyses réalisées, en incluant les résultats des tests statistiques, les graphiques descriptifs, les estimations de modèles et les prévisions.

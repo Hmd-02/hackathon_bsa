@@ -1,0 +1,13 @@
+name: serie_temp
+title: serie_temp
+username: hamed-apps
+account: hamed-apps
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 14512232
+bundleId: 10109045
+url: https://hamed-apps.shinyapps.io/serie_temp/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: test/app.R|texput.log
